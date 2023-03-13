@@ -4,11 +4,7 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class PhoneNumbers {
-        public static void main(String[] args) {
-            String filename = "file.txt";
-            readPhoneNumbers(filename);
-        }
-        public static void readPhoneNumbers(String filename) {
+       public static void readPhoneNumbers(String filename) {
             try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
                 String line;
                 Pattern pattern = Pattern.compile("^\\(\\d{3}\\) \\d{3}-\\d{4}$|^\\d{3}-\\d{3}-\\d{4}$");
@@ -23,5 +19,4 @@ public class PhoneNumbers {
                 e.printStackTrace();
             }
         }
-
 }
